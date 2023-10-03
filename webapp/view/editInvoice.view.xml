@@ -1,0 +1,166 @@
+<mvc:View controllerName="com.renesas.zsde990.controller.editInvoice"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form">
+    <App>
+        <pages>
+            <Page title="{i18n>title}">
+                <content>
+                    <HBox alignItems="Center" class="sapUiTinyMarginBegin">
+                        <Label class="sapTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="ARICLE"/>
+                        <Input width="100%"/>
+                        <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2 sapUiTinyMarginTop" text="COMMENT"/>
+                        <TextArea value="" width="360%" rows="4" class= "sapUiTinyMarginTop"/>
+                    </HBox>
+                    <VBox>
+                        <HBox alignItems="Center">
+                            <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="PKGCOUNT"/>
+                            <Input width="130%"/>
+                        </HBox>
+                        <HBox alignItems="Center">
+                            <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="LOT No1"/>
+                            <Input width="130%"/>
+                        </HBox>
+                        <HBox alignItems="Center">
+                            <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="License No1"/>
+                            <Input width="500%"/>
+                        </HBox>
+                        <HBox alignItems="Center">
+                            <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="License No2"/>
+                            <Input width="500%"/>
+                        </HBox>
+                        <HBox alignItems="Center">
+                            <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="License No3"/>
+                            <Input width="500%"/>
+                        </HBox>
+                        <HBox alignItems="Center">
+                            <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="DESCRP."/>
+                            <Input width="500%"/>
+                        </HBox>
+                    </VBox>
+                    <HBox alignItems="Center">
+                        <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="FIRST_REL."/>
+                        <Input width="100%"/>
+                        <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="INV_DATE"/>
+                        <!--<DatePicker id="DP1" change="handleChange" class="sapUiSmallMarginBottom"/>-->
+                        <Input width="100%"/>
+                        <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="INV_NO."/>
+                        <Input width="90%"></Input>
+                        <Input width="60%"></Input>
+                    </HBox>
+                    <HBox alignItems="Center">
+                        <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="L_UPDT."/>
+                        <Input width="100%"/>
+                        <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="REG_DATE"/>
+                        <Input width="100%"/>
+                        <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="DN_NO."/>
+                        <Input width="90%"/>
+                        <Input width="60%"/>
+                    </HBox>
+                    <HBox alignItems="Center">
+                        <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="ACT EE VER"/>
+                        <Input width="100%"/>
+                        <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="UPDT DEL DT"/>
+                        <Input width="100%"/>
+                        <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="QTY"/>
+                        <Input width="100%"/>
+                    </HBox>
+                    <HBox alignItems="Center">
+                        <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="PURCH_VER"/>
+                        <Input width="100%"/>
+                        <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="CURR_VER"/>
+                        <Input width="100%"/>
+                        <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="DUTY"/>
+                        <Input width="10%"/>
+                        <Label class="sapUiSmallMarginBegin sapUiTinyMarginEnd labelWidth2" text="BETA_CUST"/>
+                        <CheckBox selected="false"/>
+                    </HBox>
+                    <Toolbar width="100%" height="1px"/>
+                    <HBox alignItems="Center">
+                        <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="DIST" />
+                        <Input/>
+                        <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="OFF_NM"/>
+                        <Input/>
+                    </HBox>
+                    <HBox alignItems="Center">
+                        <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="SC_CD"/>
+                        <Input width="10%"/>
+                        <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="CUST_CD"/>
+                        <Input/>
+                        <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="MA_CD"/>
+                        <Input width="20%"/>
+                        <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="FSE_NM"/>
+                        <Input/>
+                    </HBox>
+                    <HBox alignItems="Center">
+                        <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="CST_SG"/>
+                        <Input width="10%"/>
+                        <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="ADR_CD"/>
+                        <Input/>
+                    </HBox>
+                    <VBox>
+                        <HBox alignItems="Center">
+                            <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="COMPANY"/>
+                            <Input width="260%"/>
+                        </HBox>
+                        <HBox alignItems="Center">
+                            <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="COMPANY1"/>
+                            <Input width="260%"/>
+                        </HBox>
+                        <HBox alignItems="Center">
+                            <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="DEPARTM"/>
+                            <Input width="260%"/>
+                        </HBox>
+                        <HBox alignItems="Center">
+                            <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="PERSON"/>
+                            <Input width="260%"/>
+                        </HBox>
+                        <HBox alignItems="Center">
+                            <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="ZIP Code"/>
+                            <Input width="260%"/>
+                        </HBox>
+                        <HBox alignItems="Center">
+                            <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="STREET"/>
+                            <Input width="260%"/>
+                        </HBox>
+                        <HBox alignItems="Center">
+                            <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="CITY"/>
+                            <Input width="260%"/>
+                        </HBox>
+                        <HBox alignItems="Center">
+                            <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="COUNTRY"/>
+                            <Input width="100%"/>
+                            <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="CNT_CD"/>
+                            <Input width="50%"/>
+                        </HBox>
+                        <HBox alignItems="Center">
+                            <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="TELEFON"/>
+                            <Input width="200%"/>
+                        </HBox>
+                        <HBox alignItems="Center">
+                            <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="FAX"/>
+                            <Input width="200%"/>
+                        </HBox>
+                        <HBox alignItems="Center">
+                            <Label class="sapUiTinyMarginBegin sapUiTinyMarginEnd labelWidth2" text="E_mail"/>
+                            <Input width="200%"/>
+                        </HBox>
+                    </VBox>
+                </content>
+                <footer>
+
+                    <OverflowToolbar>
+                    <ToolbarSpacer/>
+                        <Button icon="sap-icon://message-popup" text="{messagesLength}" type="Emphasized" press="onMessageButtonPress" visible="{= !!$messagesLength}}"/>
+                        <Button type="Accept" text="{i18n>Submit}" press="fnSubmit" icon="sap-icon://save" enabled="{PMRef>/oa/buttonSubmit}"/>
+                        <Button type="Reject" text="Cancel" press="onResetData" icon="sap-icon://cancel"/>
+                        
+                    </OverflowToolbar>
+                </footer>
+            </Page>
+        </pages>
+    </App>
+</mvc:View>

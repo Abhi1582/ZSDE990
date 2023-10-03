@@ -1,0 +1,249 @@
+<mvc:View controllerName="com.renesas.zsde990.controller.editInvoice"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:sfb="sap.ui.comp.smartfilterbar"
+    xmlns:smartTable="sap.ui.comp.smarttable"
+    xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    xmlns:ut='sap.ui.table'
+    xmlns:form="sap.ui.layout.form">
+    <App>
+        <pages>
+            <f:DynamicPage id="dynamicPageId" headerExpanded="{/headerExpanded}" toggleHeaderOnTitleClick="{/titleClickable}" showFooter="true">
+                <f:content>
+                    <Panel>
+
+                        <Panel>
+                            <VBox>
+                                <form:SimpleForm editable="true" layout='ResponsiveGirdLayout' title='' labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1" singleContainerFullSize="false" class=''>
+                                    <form:content>
+                                        <core:Title text="TOOLDB Manual Update" level="H1" />
+                                        <Label text="CKey" />
+                                        <Input value="{VMRef>/EditData/ckey}" editable="false"/>
+                                        <Label text="Archive" />
+                                        <Input value="{VMRef>/EditData/archive1}" editable="false"/>
+                                        <Label text="Material" />
+                                        <Input value="{VMRef>/EditData/material}" editable="false"/>
+                                        <core:Title text="" />
+                                        <Label text="License No 1" />
+                                        <Input value="{VMRef>/EditData/license_no1}"  editable="{VMRef>/oa/editEnable}"/>
+                                        <Label text="License No 2" />
+                                        <Input value="{VMRef>/EditData/license_no2}" editable="{VMRef>/oa/editEnable}"/>
+                                        <Label text="License No 3" />
+                                        <Input value="{VMRef>/EditData/license_no3}" editable="{VMRef>/oa/editEnable}"/>
+
+                                    </form:content>
+                                </form:SimpleForm>
+                                <form:SimpleForm editable="true" layout='ResponsiveGirdLayout' title='' labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1" singleContainerFullSize="false" class='zFormH5'>
+                                    <form:content>
+                                        <core:Title text="" />
+                                        <Label text="Description" />
+                                        <Input value="{VMRef>/EditData/description}" editable="false"/>
+                                        <Label text="Comment" />
+                                        <TextArea value="{VMRef>/EditData/comments}" rows='2' editable="{VMRef>/oa/editEnable}" maxLength="80"/>
+                                        <Label text="Start Warranty"/>
+                                        <!-- <Input value="{VMRef>/EditData/start_warrenty1}" /> -->
+                                        <DatePicker value="{VMRef>/EditData/start_warrenty1}" valueFormat="dd.MM.yyyy" editable="{VMRef>/oa/editEnable}"/>
+                                        <core:Title text="" />
+                                        <Label text="First Release" />
+                                        <Input value="{VMRef>/EditData/first_Rel1}" editable="false"/>
+                                        <Label text="Last Update" />
+                                        <Input value="{VMRef>/EditData/last_updt1}" editable="false"/>
+                                        <Label text="Active Version" />
+                                        <Input value="{VMRef>/EditData/actual_ver}" editable="false"/>
+                                        <Label text="Purchased Version" />
+                                        <Input value="{VMRef>/EditData/purchase_ver}" editable="false"/>
+
+                                    </form:content>
+                                </form:SimpleForm>
+                                <form:SimpleForm editable="true" layout='ResponsiveGirdLayout' title='' labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1" singleContainerFullSize="false" class='zFormH5'>
+                                    <form:content>
+                                        <core:Title text="" />
+                                        <Label text="Created Date" />
+                                        <Input value ="{path:'VMRef>/EditData/cre_date2', type:'sap.ui.model.type.Date', formatOptions : { style:'medium', UTC: true}}" editable="false"/>
+                                        <!-- <Input value="{VMRef>/EditData/cre_date2}" editable="false"/> -->
+                                        <Label text="Invoice No" />
+                                        <Input value="{VMRef>/EditData/inv_no}" editable="false"/>
+                                        <Label text="Invoice Item" />
+                                        <Input value="{VMRef>/EditData/inv_itm}" editable="false"/>
+                                        <Label text="Invoice Date" />
+                                        <Input value ="{path:'VMRef>/EditData/inv_date2', type:'sap.ui.model.type.Date', formatOptions : { style:'medium', UTC: true}}" editable="false"/>
+                                        <!-- <Input value="{VMRef>/EditData/inv_date2}" editable="false"/> -->
+                                        <Label text="DN No" />
+                                        <Input value="{VMRef>/EditData/dn_no}" editable="false"/>
+                                        <Label text="DN Item" />
+                                        <Input value="{VMRef>/EditData/dn_itm}" editable="false"/>
+                                        <Label text="Qty" />
+                                        <Input value="{VMRef>/EditData/qty}" editable="false"/>
+
+                                        <core:Title text="" />
+                                        <Label text="CST Type" />
+                                        <Input value="{VMRef>/EditData/cst_type}" editable="false"/>
+                                        <Label text="CST Addr." />
+                                        <Input value="{VMRef>/EditData/cst_Aaddr}" editable="false"/>
+                                    </form:content>
+                                </form:SimpleForm>
+
+                            </VBox>
+                        </Panel>
+                        <Panel>
+                            <l:DynamicSideContent id="DynamicSideContent" class="sapUiDSCExplored sapUiContentPadding" containerQuery="true" equalSplit="true" breakpointChanged="handleBreakpointChanged">
+                                <VBox>
+                                    <form:SimpleForm editable="true" layout='ResponsiveGirdLayout' title='' labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1" singleContainerFullSize="false" class='zFormH5'>
+                                        <form:content>
+                                            <core:Title text="" />
+                                            <Label text="Company" />
+                                            <Input value="{VMRef>/EditData/company}" editable="false"/>
+                                            <Label text="Company 1" />
+                                            <Input value="{VMRef>/EditData/company1}" editable="false"/>
+                                            <Label text="Zip Code" />
+                                            <Input value="{VMRef>/EditData/zip_Cd}" editable="false"/>
+                                            <Label text="Street" />
+                                            <Input value="{VMRef>/EditData/street}" editable="false"/>
+                                            <Label text="City" />
+                                            <Input value="{VMRef>/EditData/city}" editable="false"/>
+                                            <Label text="Country" />
+                                            <Input value="{VMRef>/EditData/country}" editable="false"/>
+                                           
+                                            <Label text="Person CD" />
+                                            <Input value="{VMRef>/EditData/person_cd}" editable="false"/>
+                                            <Label text="Person Name" />
+                                            <Input value="{VMRef>/EditData/Person_name}" editable="false"/>
+                                            <Label text="Person Email" />
+                                            <Input value="{VMRef>/EditData/person_email}" editable="false"/>
+                                            <Label text="Person Tel" />
+                                            <Input value="{VMRef>/EditData/person_tel}" editable="false"/>
+                                            <Label text="Person Department" />
+                                            <Input value="{VMRef>/EditData/person_department}" editable="false"/>
+                                            <Label text="Distributor Name" />
+                                            <Input value="{VMRef>/EditData/disti_name}" editable="false" />
+                                            
+                                        </form:content>
+                                    </form:SimpleForm>
+
+                                </VBox>
+                                <l:sideContent>
+                                    <VBox>
+                                        <ut:Table rows="{VMRef>/AddressList}" selectionMode="Single" visibleRowCount="9" paste="onPaste" ariaLabelledBy="title" fixedColumnCount="1" rowSelectionChange="onAddSelection">
+                                            <ut:extension>
+                                                <Toolbar style="Clear">
+                                                    <Title id="title" text="Address List"/>
+                                                    <ToolbarSpacer />
+                                                    <SearchField width="20rem" search=".onAddressSearch" />
+                                                    <Button text="New" press="onCBO2"/>
+                                                    <Button text="Update" press="onAddUpdate" enabled="{VMRef>/oa/editEnable}"/>
+                                                </Toolbar>
+                                            </ut:extension>
+                                            <ut:columns>
+                                                <ut:Column width="9rem">
+                                                    <Label text="Company" />
+                                                    <ut:template>
+                                                        <Text text="{VMRef>Company}" wrapping="false" />
+                                                    </ut:template>
+                                                </ut:Column>
+                                                <ut:Column width="9rem">
+                                                    <Label text="Company1" />
+                                                    <ut:template>
+                                                        <Text text="{VMRef>Company1}" wrapping="false" />
+                                                    </ut:template>
+                                                </ut:Column>
+                                                <ut:Column width="7rem">
+                                                    <Label text="Street Name" />
+                                                    <ut:template>
+                                                        <Text text="{VMRef>Street}" wrapping="false" />
+                                                    </ut:template>
+                                                </ut:Column>
+                                                <ut:Column width="4rem">
+                                                    <Label text="ZipCd" />
+                                                    <ut:template>
+                                                        <Text text="{VMRef>ZipCd}" wrapping="false" />
+                                                    </ut:template>
+                                                </ut:Column>
+                                                <ut:Column width="6rem">
+                                                    <Label text="City" />
+                                                    <ut:template>
+                                                        <Text text="{VMRef>City}" wrapping="false" />
+                                                    </ut:template>
+                                                </ut:Column>
+                                                <ut:Column width="6rem">
+                                                    <Label text="Country" />
+                                                    <ut:template>
+                                                        <Text text="{VMRef>Country}" wrapping="false" />
+                                                    </ut:template>
+                                                </ut:Column>
+                                                <ut:Column width="8rem">
+                                                    <Label text="PersonName" />
+                                                    <ut:template>
+                                                        <Text text="{VMRef>PersonName}" wrapping="false" />
+                                                    </ut:template>
+                                                </ut:Column>
+                                                <ut:Column width="8rem">
+                                                    <Label text="PersonTel" />
+                                                    <ut:template>
+                                                        <Text text="{VMRef>PersonTel}" wrapping="false" />
+                                                    </ut:template>
+                                                </ut:Column>
+                                                <ut:Column width="9rem">
+                                                    <Label text="PersonEmail" />
+                                                    <ut:template>
+                                                        <Text text="{VMRef>PersonEmail}" wrapping="false" />
+                                                    </ut:template>
+                                                </ut:Column>
+                                                <ut:Column width="5rem">
+                                                    <Label text="PersonDepartment" />
+                                                    <ut:template>
+                                                        <Text text="{VMRef>PersonDepartment}" wrapping="false" />
+                                                    </ut:template>
+                                                </ut:Column>
+                                                <ut:Column width="7rem">
+                                                    <Label text="DistiName" />
+                                                    <ut:template>
+                                                        <Text text="{VMRef>DistiName}" wrapping="false" />
+                                                    </ut:template>
+                                                </ut:Column>
+                                                <ut:Column width="7rem">
+                                                    <Label text="DistiEndCst" />
+                                                    <ut:template>
+                                                        <Text text="{VMRef>DistiEndCst}" wrapping="false" />
+                                                    </ut:template>
+                                                </ut:Column>
+                                                <ut:Column width="7rem">
+                                                    <Label text="CST" />
+                                                    <ut:template>
+                                                        <Text text="{VMRef>Cst}" wrapping="false" />
+                                                    </ut:template>
+                                                </ut:Column>
+                                                <ut:Column width="6rem">
+                                                    <Label text="CreatedOn1" />
+                                                    <ut:template>
+                                                        <Text text="{VMRef>CreatedOn1}" wrapping="false" />
+                                                    </ut:template>
+                                                </ut:Column>
+
+                                            </ut:columns>
+
+                                        </ut:Table>
+
+                                    </VBox>
+                                </l:sideContent>
+                            </l:DynamicSideContent>
+                        </Panel>
+                    </Panel>
+                </f:content>
+                <!-- DynamicPage Footer -->
+                <f:footer>
+                    <OverflowToolbar>
+                        <Button icon="sap-icon://message-popup" text="{/messagesLength}" type="Emphasized" press="onMessageButtonPress" visible="false"/>
+                        <ToolbarSpacer/>
+                        <Button type="Accept" text="Submit" press="onSubmit" enabled="{VMRef>/oa/editEnable}"/>
+                        <Button type="Reject" text="Cancel" press="onCancel"/>
+                    </OverflowToolbar>
+                </f:footer>
+            </f:DynamicPage>
+
+        </pages>
+    </App>
+</mvc:View>

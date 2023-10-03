@@ -1,0 +1,60 @@
+<mvc:View controllerName="com.renesas.zsde990.controller.Main"
+    xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:ut='sap.ui.table' displayBlock="true"
+    xmlns:table="sap.ui.table"
+    xmlns:fb="sap.ui.comp.filterbar"
+    xmlns:sfb="sap.ui.comp.smartfilterbar"
+    xmlns:st="sap.ui.comp.smarttable"
+    xmlns:f='sap.f'
+    xmlns:svm="sap.ui.comp.smartvariants"
+    xmlns="sap.m"
+    xmlns:vm="sap.ui.comp.variants">
+    <f:DynamicPage headerExpanded="{/headerExpanded}">
+        <f:header>
+            <f:DynamicPageHeader>
+                <f:content>
+	                <sfb:SmartFilterBar id="smartFilterBar" entitySet="ZCDS_SDE990_GET_TOOLDB" 
+                        useToolbar="true"
+                        persistencyKey="SmartFilter_Explored" enableBasicSearch="false" >
+                        <sfb:controlConfiguration>
+                            <sfb:ControlConfiguration key="inv_no" label='Invoice' visibleInAdvancedArea="true" index="0"/>
+                            <sfb:ControlConfiguration key="material" label='Material' visibleInAdvancedArea="true" index="1"/>
+                            <sfb:ControlConfiguration key="license_no1" label='LicenseNo1' visibleInAdvancedArea="true" index="2"/>
+                            <sfb:ControlConfiguration key="inv_date2" label='Invoice Period' visibleInAdvancedArea="true" index="3"/>
+                        </sfb:controlConfiguration>
+                        <!-- layout data used to make the table growing but the filter bar fixed -->
+                        <sfb:layoutData>
+                            <FlexItemData shrinkFactor="0"/>
+                        </sfb:layoutData>
+                    </sfb:SmartFilterBar>                
+                </f:content>
+            </f:DynamicPageHeader>
+        </f:header>
+        <f:content>
+            <st:SmartTable id="stToolDBId" 
+                entitySet="ZCDS_SDE990_GET_TOOLDB" smartFilterId="smartFilterBar" tableType="Table" 
+                useExportToExcel="true" beforeExport="onBeforeExport" useVariantManagement="true" 
+                useTablePersonalisation="true" header="Invoice Items" showRowCount="true" 
+                persistencyKey="SmartTableAnalytical_Explored" enableAutoBinding="true" 
+                class="sapUiResponsiveContentPadding" enableAutoColumnWidth="true" 
+                editTogglable="false" app:useSmartToggle="true" showFullScreenButton="true"
+                beforeRebindTable='onBRT'
+                initiallyVisibleFields="inv_no,material,license_no1,inv_date2,ckey,archive1,first_Rel1,last_updt1,actual_ver,description,purchase_ver,cst_type,cst_Aaddr,company,company1,street,zip_Cd,city,country,person_cd,Person_name,person_email,person_tel,person_department,disti_name,cre_date2,inv_itm,dn_no,dn_itm,qty,comments,start_warrenty1,license_no2,license_no3" >
+				<!-- layout data used to make the table growing but the filter bar fixed -->
+				<st:layoutData>
+					<FlexItemData growFactor="1" baseSize="0%"/>
+				</st:layoutData>
+                <st:customToolbar>
+                    <OverflowToolbar >
+                        <ToolbarSpacer />
+                        <Button icon='sap-icon://edit' press='onNewEdit' />
+                    </OverflowToolbar>
+                </st:customToolbar>
+                <ut:Table selectionMode="Single" fixedColumnCount="1" alternateRowColors="true" rowSelectionChange='onStRowSel' visibleRowCountMode="Auto">
+                </ut:Table>
+			</st:SmartTable>        
+        </f:content>
+    </f:DynamicPage>
+</mvc:View>

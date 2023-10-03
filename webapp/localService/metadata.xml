@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZSDE990_UPDATE_TOOLDB_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <EntityType Name="TOOLDB" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Material"/>
+                    <PropertyRef Name="InvNo"/>
+                    <PropertyRef Name="LicenseNo1"/>
+                </Key>
+                <Property Name="Client" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Client" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SapUuid" Type="Edm.Guid" Nullable="false" sap:unicode="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CKey" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Text of length 50" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Archive" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Text of length 5" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Material" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Text of length 40" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="FirstRel1" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Text of length 10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LastUpdt1" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Text of length 10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ActualVer" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Text of length 20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SapDescription" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Text of length 100" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PurchaseVer" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Text of length 50" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CstType" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Text of length 2" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CstAaddr" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Text of length 20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Company" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Text of length 40" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Company1" Type="Edm.String" Nullable="false" MaxLength="42" sap:unicode="false" sap:label="Text of length 42" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Street" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Text of length 50" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ZipCd" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Text of length 50" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="City" Type="Edm.String" Nullable="false" MaxLength="49" sap:unicode="false" sap:label="Text of length 49" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Country" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Text of length 20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PersonCd" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Text of length 3" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PersonName" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Text of length 50" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PersonEmail" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Text of length 50" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PersonTel" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Text of length 20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PersonDepartement" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Text of length 50" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DistiName" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Text of length 50" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CreDate2" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Text of length 10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="InvDate2" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Text of length 10" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="InvNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Text of length 10" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="InvItm" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Text of length 6" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DnNo" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Text of length 10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DnItm" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Text of length 6" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Qty" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Text of length 5" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Comments" Type="Edm.String" Nullable="false" MaxLength="79" sap:unicode="false" sap:label="Text of length 79" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="StartWarrenty1" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Text of length 10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LicenseNo1" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Text of length 50" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="LicenseNo2" Type="Edm.String" Nullable="false" MaxLength="49" sap:unicode="false" sap:label="Text of length 49" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LicenseNo3" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Text of length 50" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="CSTADR" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Cst"/>
+                </Key>
+                <Property Name="Client" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Client" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SapUuid" Type="Edm.Guid" Nullable="false" sap:unicode="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Cst" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Text of length 20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SapDescription" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Text of length 50" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Company1" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Text of length 50" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Street" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Text of length 50" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ZipCd" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Text of length 50" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="City" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Text of length 50" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Country" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Text of length 20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PersonCd" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Text of length 3" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PersonName" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Text of length 50" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PersonEmail" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Text of length 50" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PersonTel" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Text of length 20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PersonDepartment" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Text of length 50" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DistiName" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Text of length 50" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DistiEndCst" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Text of length 50" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CreatedOn1" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Text of length 10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="ZSDE990_UPDATE_TOOLDB_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="TOOLDBSet" EntityType="ZSDE990_UPDATE_TOOLDB_SRV.TOOLDB" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="CSTADRSet" EntityType="ZSDE990_UPDATE_TOOLDB_SRV.CSTADR" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="https://sapvs4ap1dev.erp.renesas.com:8443/sap/opu/odata/sap/ZSDE990_UPDATE_TOOLDB_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://sapvs4ap1dev.erp.renesas.com:8443/sap/opu/odata/sap/ZSDE990_UPDATE_TOOLDB_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

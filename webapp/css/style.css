@@ -1,0 +1,24 @@
+/* Enter your custom styles here */
+.labelWidth{
+	width:80px;
+}
+.labelWidth1{
+	width:80px;
+}
+.labelWidth2{
+	width:90px;
+}
+.labelWidth3{
+	width:30px;
+}
+
+.zFormH5 .sapUiFormTitleH5{
+	letter-spacing: -0.12px !important;
+	line-height: 16px !important;
+	height: 0 !important;
+	margin-bottom: -1px !important;
+}
+.sapMMessageToast{
+	background-color: #600 !important;
+	color: #fff !important;
+}
